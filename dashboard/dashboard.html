@@ -1,0 +1,176 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../public/css/bootstrap.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="../public/font/bootstrap-icons.min.css">
+
+    <style>
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .nav-link:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+    </style>
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-2 d-flex justify-content-center">
+                    <img src="../public/images/logo-tpq.png" class="d-none d-lg-block my-2" alt="Logo TPQ" height="65px">
+                </div>
+                <div class="col text-center">
+                    <h3 class="m-lg-0 my-4 text-dark">Taman Pendidikan Al-Qur’an Nurul Hidayah</h3>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-lg-none fw-bold" href="#">Menu</a>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler" >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link rounded-2 active">Dashboard</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link rounded-2 dropdown-toggle" href="#" id="navbarMaster" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Master
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarMaster">
+                            <li><a class="dropdown-item" href="#">Data Siswa</a></li>
+                            <li><a class="dropdown-item" href="#">Data Kelas</a></li>
+                            <li><a class="dropdown-item" href="#">Data Kategori</a></li>
+                            <li><a class="dropdown-item" href="#">Data Materi</a></li>
+                            <li><a class="dropdown-item" href="#">Data Akhlaq</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link rounded-2 dropdown-toggle" href="#" id="navbarTransaksi" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Transaksi
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarTransaksi">
+                            <li><a class="dropdown-item" href="#">Entri Nilai Siswa</a></li>
+                            <li><a class="dropdown-item" href="#">Cetak Rapor Siswa</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link rounded-2 dropdown-toggle" href="#" id="navbarLaporan" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Laporan
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarLaporan">
+                            <li><a class="dropdown-item" href="#">Cetak Laporan Data Siswa</a></li>
+                            <li><a class="dropdown-item" href="#">Cetak Laporan Nilai Kelas</a></li>
+                            <li><a class="dropdown-item" href="#">Cetak Laporan Keseluruhan Nilai</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link rounded-2 dropdown-toggle" href="#" id="navbarPengaturan" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pengaturan
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarPengaturan">
+                            <li><a class="dropdown-item" href="#">Profil</a></li>
+                            <li><a class="dropdown-item" href="#">Pengaturan lainnya</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link rounded-2">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container-fluid my-3 flex-grow-1">
+        <div class="row mb-3">
+            <div class="col-6 d-none d-md-block">
+                <span class="badge p-2 text-bg-success">
+                    <h6 class="m-0 p-0"> Selamat Datang, Tegar Mandiri</h6>
+                </span>
+            </div>
+            <div class="col-6 text-md-end text-start">
+                <span class="badge p-2 text-bg-warning">
+                    <h6 class="m-0 p-0" id="current-date-time" class="text-end"></h6>
+                </span>
+            </div>
+        </div>
+        <div class="card py-3">
+            <div class="d-flex flex-md-row flex-column">
+                <div class="mx-3">
+                    <img class="rounded ms-md-auto mx-xxl-auto mb-md-0 mb-3 d-block" src="https://picsum.photos/150/200" alt="profil">
+                </div>
+                <div class="row col-12 d-flex flex-column justify-content-between ms-md-0 my-md-0 ms-2 my-3">
+                    <div class="row">
+                        <div class="col-5 col-md-3 col-lg-2">NIP</div>
+                        <div class="col-7">: 240020</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5 col-md-3 col-lg-2">Nama</div>
+                        <div class="col-7">: Tegar Mandiri</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5 col-md-3 col-lg-2">Jabatan</div>
+                        <div class="col-7">: Junior Programmer</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5 col-md-3 col-lg-2">Pendidikan</div>
+                        <div class="col-7">: S1</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5 col-md-3 col-lg-2">No. Handphone</div>
+                        <div class="col-7">: 081234567890</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5 col-md-3 col-lg-2">Role</div>
+                        <div class="col-7">: Admin</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-light text-center p-4 text-center m-0">
+        <div class="container-fluid">
+            <small>Copyright &copy; 2024, Taman Pendidikan Al-Qur’an Nurul Hidayah</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="../public/js/bootstrap.bundle.js"></script>
+
+    <!-- Script Customization -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const dateTimeElement = document.getElementById('current-date-time');
+            const today = new Date();
+            const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+            const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+            const hours = today.getHours().toString().padStart(2, '0');
+            const minutes = today.getMinutes().toString().padStart(2, '0');
+            const seconds = today.getSeconds().toString().padStart(2, '0');
+            const formattedTime = `${hours}:${minutes}:${seconds}`;
+            const formattedDate = today.toLocaleDateString('id-ID', dateOptions);
+
+            dateTimeElement.innerText = `Tanggal ${formattedDate} | Jam ${formattedTime}`;
+        });
+    </script>
+</body>
+</html>
