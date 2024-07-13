@@ -16,3 +16,7 @@ $spacers: (
     9: ($spacer * 9),
     10: ($spacer * 10.5)
 );
+
+.mw-fit {
+    max-width: fit-content;
+}
