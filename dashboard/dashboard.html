@@ -184,7 +184,7 @@
     <script src="../public/js/bootstrap.bundle.js"></script>
 
     <!-- Script Customization -->
-    <!-- <script>
+    <script>
         document.addEventListener('DOMContentLoaded', (event) => {
             const dateTimeElement = document.getElementById('current-date-time');
             const today = new Date();
@@ -195,18 +195,13 @@
             const seconds = today.getSeconds().toString().padStart(2, '0');
             const formattedTime = `${hours}:${minutes}:${seconds}`;
             const formattedDate = today.toLocaleDateString('id-ID', dateOptions);
-
             dateTimeElement.innerText = `${formattedDate}, ${formattedTime}`;
-        });
 
-        document.addEventListener('DOMContentLoaded', (event) => {
             const dateElement = document.getElementById('current-date');
-            const today = new Date();
-            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            const formattedDate = today.toLocaleDateString('id-ID', dateOptions);
-
-            dateElement.innerText = `${formattedDate}`;
+            const dateWithDayOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDateWithDay = today.toLocaleDateString('id-ID', dateWithDayOptions);
+            dateElement.innerText = `${formattedDateWithDay}`;
         });
-    </script> -->
+    </script>
 </body>
 </html>
