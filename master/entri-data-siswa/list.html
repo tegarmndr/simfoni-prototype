@@ -36,6 +36,7 @@
             </div>
         </div>
     </header>
+    <!-- /Header -->
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
@@ -96,34 +97,122 @@
             </div>
         </div>
     </nav>
+    <!-- /Navbar -->
 
     <!-- Content -->
     <main class="container-fluid my-3 flex-grow-1">
-        <!-- Header Content -->
-        <div class="d-flex flex-column gap-1">
-            <!-- Main Content -->
+        <div class="d-flex flex-column">
             <div class="card">
                 <div class="card-body">
-                    <h3 class="p-0 m-0">Entri Data Siswa</h3>
-                    <!-- Breadcrumb -->
-                     <small>
-                         <nav aria-label="breadcrumb m-0 p-0">
-                             <ol class="breadcrumb m-0 p-0">
-                                <li class="breadcrumb-item">
-                                    <a href="pilih_periode.html">Periode</a>
-                                </li>
-                                <li class="breadcrumb-item active">
-                                    Daftar Siswa
-                                </li>
-                             </ol>
-                         </nav>
-                     </small>
-                     <hr class="my-2">
-                    
+                    <!-- Header Content -->
+                    <div class="d-flex flex-column">
+                        <h3 class="p-0 m-0">Entri Data Siswa</h3>
+                        <!-- Breadcrumb -->
+                        <small>
+                            <nav aria-label="breadcrumb m-0 p-0">
+                                <ol class="breadcrumb m-0 p-0">
+                                    <li class="breadcrumb-item">
+                                        <a href="pilih_periode.html">Periode</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">
+                                        Daftar Siswa
+                                    </li>
+                                </ol>
+                            </nav>
+                        </small>
+                        <!-- /Breadcrumb -->
+                    </div>
+                    <hr class="my-2">
+                    <!-- /Header Content -->
+                    <!-- Main Content -->
+                    <div class="my-3">
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex flex-row">
+                                <p class="m-0 p-0 fw-bold">Tahun Ajaran</p>
+                                <p class="m-0 p-0 ms-5 me-2">:</p>
+                                <p class="m-0 p-0">2021/2022</p>
+                            </div>
+                            <button class="btn text-bg-dark btn-sm mw-fit align-self-center" id="importButton">Import data siswa dari File CSV</button>
+                            <input type="file" id="fileInput" accept=".csv" style="display: none;">
+
+                            <div class="table-responsive-md">
+                                <table class="table table-hover table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-1">No</th>
+                                            <th class="col-2">NISM</th>
+                                            <th class="col">Nama</th>
+                                            <th class="col-2">Jenis Kelamin</th>
+                                            <th class="col-2">Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>131020</td>
+                                            <td>Muhammad Alfatih Fathurrahman</td>
+                                            <td>L</td>
+                                            <td>
+                                                <a href="ubah.html" class="btn btn-warning btn-sm">Ubah</a>
+                                                <a href="#" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>139332</td>
+                                            <td>Alif Febrian Kurnia</td>
+                                            <td>L</td>
+                                            <td>
+                                                <a href="ubah.html" class="btn btn-warning btn-sm">Ubah</a>
+                                                <a href="#" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>133288</td>
+                                            <td>Arini Aulia</td>
+                                            <td>P</td>
+                                            <td>
+                                                <a href="ubah.html" class="btn btn-warning btn-sm">Ubah</a>
+                                                <a href="#" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>130487</td>
+                                            <td>Earlyta Qiara Putri</td>
+                                            <td>P</td>
+                                            <td>
+                                                <a href="ubah.html" class="btn btn-warning btn-sm">Ubah</a>
+                                                <a href="#" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>138541</td>
+                                            <td>Fania Kesha Ramadhani</td>
+                                            <td>P</td>
+                                            <td>
+                                                <a href="ubah.html" class="btn btn-warning btn-sm">Ubah</a>
+                                                <a href="#" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="d-flex flex-row gap-3">
+                                <a href="tambah.html" class="btn btn-primary btn-sm">Tambah Data Siswa</a>
+                                <a href="pilih_periode.html" class="btn btn-secondary btn-sm">Kembali</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Main Content -->
                 </div>
             </div>
         </div>
     </main>
+    <!-- /Content -->
     
 
     <!-- Footer -->
@@ -132,9 +221,25 @@
             <small>Copyright &copy; 2024, Taman Pendidikan Al-Qur’an Nurul Hidayah</small>
         </div>
     </footer>
+    <!-- /Footer -->
 
     <!-- Bootstrap JS -->
     <script src="../../public/js/bootstrap.bundle.js"></script>
+
+    <!-- Script File Input -->
+    <script>
+        document.getElementById('importButton').addEventListener('click', function() {
+          document.getElementById('fileInput').click();
+        });
+      
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+          const file = event.target.files[0];
+          if (file) {
+            console.log('File selected:', file.name);
+            // Tambahkan logika untuk mengimpor dan memproses file di sini
+          }
+        });
+      </script>      
 
 </body>
 </html>
