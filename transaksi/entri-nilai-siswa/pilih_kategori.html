@@ -111,7 +111,10 @@
                             <nav aria-label="breadcrumb m-0 p-0">
                                 <ol class="breadcrumb m-0 p-0">
                                     <li class="breadcrumb-item active">
-                                        Pilih Periode
+                                        <a href="pilih_periode.html">Pilih Periode</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">
+                                        Pilih Kategori
                                     </li>
                                 </ol>
                             </nav>
@@ -123,38 +126,21 @@
                     <!-- Main Content -->
                     <form action="list.html" method="post">
                         <div class="d-flex flex-row align-items-center my-3">
-                            <label for="tahun-ajaran" class="form-label m-0 p-0 col-4 col-md-2 col-xl-1">Tahun Ajaran</label>
+                            <label for="kategori" class="form-label m-0 p-0 col-4 col-md-2 col-xl-1">Kategori</label>
                             <p class="m-0 p-0 ms-5 me-2">:</p>
-                            <select class="form-select mw-fit" id="tahun-ajaran" name="tahun-ajaran" required>
-                                <option selected disabled>Pilih Tahun Ajaran</option>
-                                <option value="2021/2022">2021/2022</option>
-                                <option value="2022/2023">2022/2023</option>
-                                <option value="2023/2024">2023/2024</option>
+                            <select class="form-select mw-fit" id="kategori" name="kategori" required>
+                                <option selected disabled>Pilih Kategori</option>
+                                <option value="materi-pokok-tilawati">Materi Pokok Tilawati</option>
+                                <option value="materi-penunjang">Materi Penunjang</option>
+                                <option value="akhlaq-santri">Akhlaq Santri</option>
+                                <option value="kehadiran">Kehadiran</option>
+                                <option value="nasihat-nasihat">Nasihat-nasihat</option>
                             </select>
                         </div>
-                        <div class="d-flex flex-row align-items-center my-3">
-                            <label for="semester" class="form-label m-0 p-0 col-4 col-md-2 col-xl-1">Semester</label>
-                            <p class="m-0 p-0 ms-5 me-2">:</p>
-                            <select class="form-select mw-fit" id="semester" name="semester" required>
-                                <option selected disabled>Pilih Semester</option>
-                                <option value="gasal">Gasal</option>
-                                <option value="genap">Genap</option>
-                            </select>
+                        <div class="d-flex flex-row gap-3">
+                            <a href="list.html" class="btn btn-primary btn-sm">Tampilkan Data Nilai</a>
+                            <a href="pilih_periode.html" class="btn btn-secondary btn-sm">Kembali</a>
                         </div>
-                        <div class="d-flex flex-row align-items-center my-3">
-                            <label for="kelas" class="form-label m-0 p-0 col-4 col-md-2 col-xl-1">Kelas</label>
-                            <p class="m-0 p-0 ms-5 me-2">:</p>
-                            <select class="form-select mw-fit" id="kelas" name="kelas" required>
-                                <option selected disabled>Pilih Kelas</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                        <!-- <button type="submit" class="btn btn-primary btn-sm">Tampilkan Data Siswa</button> -->
-                        <a href="pilih_kategori.html" class="btn btn-primary btn-sm">Pilih Kategori</a>
                     </form>
                     <!-- /Main Content -->
                 </div>
