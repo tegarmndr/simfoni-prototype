@@ -36,6 +36,7 @@
             </div>
         </div>
     </header>
+    <!-- /Header -->
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
@@ -96,6 +97,7 @@
             </div>
         </div>
     </nav>
+    <!-- /Navbar -->
 
     <!-- Content -->
     <main class="container-fluid my-3 flex-grow-1">
@@ -103,24 +105,28 @@
             <div class="card">
                 <div class="card-body">
                     <!-- Header Content -->
-                    <h3 class="p-0 m-0">Dashboard</h3>
-                    <!-- Breadcrumb -->
-                    <small>
-                        <nav aria-label="breadcrumb m-0 p-0">
-                            <ol class="breadcrumb m-0 p-0">
-                                <li class="breadcrumb-item active">
-                                    Dashboard
-                                </li>
-                            </ol>
-                        </nav>
-                    </small>
+                    <div class="d-flex flex-column">
+                        <h3 class="p-0 m-0">Dashboard</h3>
+                        <!-- Breadcrumb -->
+                        <small>
+                            <nav aria-label="breadcrumb m-0 p-0">
+                                <ol class="breadcrumb m-0 p-0">
+                                    <li class="breadcrumb-item active">
+                                        Dashboard
+                                    </li>
+                                </ol>
+                            </nav>
+                        </small>
+                        <!-- /Breadcrumb -->
+                    </div>
                     <hr class="my-2">
+                    <!-- /Header Content -->
                     <!-- Main Content -->
                     <div class="my-3">
-                        <div class="d-flex flex-column gap-3">
-                            <div class="d-flex flex-row justify-content-between">
-                                <h6 class="m-0 p-0 d-none d-md-block"> Selamat Datang, Tegar Mandiri</h6>
-                                <h6 class="m-0 p-0" id="current-date-time" class="text-end"></h6>
+                        <div class="d-flex flex-column gap-4">
+                            <div class="d-flex flex-row justify-content-between align-items-center">
+                                <h5 class="m-0 p-0"> Selamat datang, Tegar Mandiri</h5>
+                                <h6 class="m-0 p-0 d-none d-md-block" id="current-date" class="text-end"></h6>
                             </div>
                             <div class="d-flex flex-md-row flex-column">
                                 <div class="me-3">
@@ -151,14 +157,20 @@
                                         <div class="col-5 col-md-3 col-lg-2">Role</div>
                                         <div class="col-7">: Admin</div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-5 col-md-3 col-lg-2">Login pada</div>
+                                        <div class="col-7">: <span id="current-date-time"></span></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- /Main Content -->
                 </div>
             </div>
         </div>
     </main>
+    <!-- /Content -->
 
     <!-- Footer -->
     <footer class="bg-primary text-light text-center p-4 text-center m-0">
@@ -166,6 +178,7 @@
             <small>Copyright &copy; 2024, Taman Pendidikan Al-Qur’an Nurul Hidayah</small>
         </div>
     </footer>
+    <!-- /Footer -->
 
     <!-- Bootstrap JS -->
     <script src="../public/js/bootstrap.bundle.js"></script>
@@ -183,7 +196,16 @@
             const formattedTime = `${hours}:${minutes}:${seconds}`;
             const formattedDate = today.toLocaleDateString('id-ID', dateOptions);
 
-            dateTimeElement.innerText = `Tanggal ${formattedDate} | Jam ${formattedTime}`;
+            dateTimeElement.innerText = `${formattedDate}, ${formattedTime}`;
+        });
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const dateElement = document.getElementById('current-date');
+            const today = new Date();
+            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = today.toLocaleDateString('id-ID', dateOptions);
+
+            dateElement.innerText = `${formattedDate}`;
         });
     </script>
 </body>
