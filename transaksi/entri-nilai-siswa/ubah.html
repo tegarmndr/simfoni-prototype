@@ -116,8 +116,13 @@
                                     <li class="breadcrumb-item">
                                         <a href="pilih_kategori.html">Pilih Kategori</a>
                                     </li>
+                                    <li class="breadcrumb-item">
+                                        <a href="list.html" class="breadcrumb-item">
+                                            Daftar Siswa
+                                        </a>
+                                    </li>
                                     <li class="breadcrumb-item active">
-                                        Daftar Siswa
+                                        Ubah Nilai Siswa
                                     </li>
                                 </ol>
                             </nav>
@@ -128,116 +133,43 @@
                     <!-- /Header Content -->
                     <!-- Main Content -->
                     <div class="my-3">
-                        <div class="d-flex flex-column gap-3">
-                            <div class="d-flex flex-column">
-                                <div class="d-flex flex-row align-items-center">
-                                    <p class="m-0 p-0 fw-bold col-4 col-md-2 col-xl-1">Tahun Ajaran</p>
-                                    <p class="m-0 p-0 ms-5 me-2">:</p>
-                                    <p class="m-0 p-0">2021/2022</p>
-                                </div>
-                                <div class="d-flex flex-row">
-                                    <p class="m-0 p-0 fw-bold col-4 col-md-2 col-xl-1">Semester</p>
-                                    <p class="m-0 p-0 ms-5 me-2">:</p>
-                                    <p class="m-0 p-0">Gasal</p>
-                                </div>
-                                <div class="d-flex flex-row">
-                                    <p class="m-0 p-0 fw-bold col-4 col-md-2 col-xl-1">Kelas</p>
-                                    <p class="m-0 p-0 ms-5 me-2">:</p>
-                                    <p class="m-0 p-0">1</p>
-                                </div>
-                                <div class="d-flex flex-row">
-                                    <p class="m-0 p-0 fw-bold col-4 col-md-2 col-xl-1">Kategori</p>
-                                    <p class="m-0 p-0 ms-5 me-2">:</p>
-                                    <p class="m-0 p-0">Materi Pokok Tilawati</p>
-                                </div>
+                        <form action="list.html" method="post">
+                            <div class="d-flex flex-row align-items-center my-3">
+                                <label for="nama-siswa" class="form-label m-0 p-0 col-4 col-md-2 col-xl-1">Nama Siswa</label>
+                                <p class="m-0 p-0 ms-5 me-2">:</p>
+                                <p class="m-0 p-0">Muhammad Alfatih Fathurrahman</p>
                             </div>
-                            <button class="btn text-bg-dark btn-sm mw-fit align-self-center" id="importButton">Import nilai siswa dari File CSV</button>
-                            <input type="file" id="fileInput" accept=".csv" style="display: none;">
-
-                            <div class="table-responsive-md">
-                                <table class="table table-hover table-striped table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th class="col-1">No</th>
-                                            <th class="col-1">NISM</th>
-                                            <th class="col">Nama</th>
-                                            <th class="col-1">Kelancaran</th>
-                                            <th class="col-1">Fashohah</th>
-                                            <th class="col-1">Tajwid</th>
-                                            <th class="col-2">Suara dan Lagu Rost</th>
-                                            <th class="col-2">Aksi</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>131020</td>
-                                            <td>Muhammad Alfatih Fathurrahman</td>
-                                            <td>999</td>
-                                            <td>999</td>
-                                            <td>999</td>
-                                            <td>999</td>
-                                            <td>
-                                                <a href="ubah.html" class="btn btn-warning btn-sm">Ubah</a>
-
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>139332</td>
-                                            <td>Alif Febrian Kurnia</td>
-                                            <td>999</td>
-                                            <td>999</td>
-                                            <td>999</td>
-                                            <td>999</td>
-                                            <td>
-                                                <a href="ubah.html" class="btn btn-warning btn-sm">Ubah</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>133288</td>
-                                            <td>Arini Aulia</td>
-                                            <td>999</td>
-                                            <td>999</td>
-                                            <td>999</td>
-                                            <td>999</td>
-                                            <td>
-                                                <a href="ubah.html" class="btn btn-warning btn-sm">Ubah</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>130487</td>
-                                            <td>Earlyta Qiara Putri</td>
-                                            <td>999</td>
-                                            <td>999</td>
-                                            <td>999</td>
-                                            <td>999</td>
-                                            <td>
-                                                <a href="ubah.html" class="btn btn-warning btn-sm">Ubah</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>138541</td>
-                                            <td>Fania Kesha Ramadhani</td>
-                                            <td>999</td>
-                                            <td>999</td>
-                                            <td>999</td>
-                                            <td>999</td>
-                                            <td>
-                                                <a href="ubah.html" class="btn btn-warning btn-sm">Ubah</a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <p class="text-danger"><i>*Nilai 999: nilai default / belum memiliki nilai.</i></p>
+                            <div class="d-flex flex-row align-items-center my-3">
+                                <label for="kategori" class="form-label m-0 p-0 col-4 col-md-2 col-xl-1">Kategori</label>
+                                <p class="m-0 p-0 ms-5 me-2">:</p>
+                                <p class="m-0 p-0">Materi Pokok Tilawati</p>
                             </div>
+                            <div class="d-flex flex-row align-items-center my-3">
+                                <label for="kelancaran" class="form-label m-0 p-0 col-4 col-md-2 col-xl-1">Kelancaran</label>
+                                <p class="m-0 p-0 ms-5 me-2">:</p>
+                                <input type="text" class="form-control mw-fit" id="kelancaran" name="kelancaran" required>
+                            </div>
+                            <div class="d-flex flex-row align-items-center my-3">
+                                <label for="fashohah" class="form-label m-0 p-0 col-4 col-md-2 col-xl-1">Fashohah</label>
+                                <p class="m-0 p-0 ms-5 me-2">:</p>
+                                <input type="text" class="form-control mw-fit" id="fashohah" name="fashohah" required>
+                            </div>
+                            <div class="d-flex flex-row align-items-center my-3">
+                                <label for="tajwid" class="form-label m-0 p-0 col-4 col-md-2 col-xl-1">Tajwid</label>
+                                <p class="m-0 p-0 ms-5 me-2">:</p>
+                                <input type="text" class="form-control mw-fit" id="tajwid" name="tajwid" required>
+                            </div>
+                            <div class="d-flex flex-row align-items-center my-3">
+                                <label for="suara-dan-lagu-rost" class="form-label m-0 p-0 col-4 col-md-2 col-xl-1">Suara dan Lagu Rost</label>
+                                <p class="m-0 p-0 ms-5 me-2">:</p>
+                                <input type="text" class="form-control mw-fit" id="suara-dan-lagu-rost" name="suara-dan-lagu-rost" required>
+                            </div>
+                            <!-- <button type="submit" class="btn btn-primary btn-sm">Tampilkan Data Siswa</button> -->
                             <div class="d-flex flex-row gap-3">
-                                <a href="pilih_kategori.html" class="btn btn-secondary btn-sm">Kembali</a>
+                                <a href="list.html" class="btn btn-warning btn-sm" onclick="return confirm('Apakah Anda yakin ingin mengubah data ini?')">Ubah Data</a>
+                                <a href="list.html" class="btn btn-secondary btn-sm">Kembali</a>
                             </div>
-                        </div>
+                        </form>
                     </div>
                     <!-- /Main Content -->
                 </div>
