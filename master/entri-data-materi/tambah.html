@@ -127,37 +127,34 @@
                     <hr class="my-2">
                     <!-- /Header Content -->
                     <!-- Main Content -->
-                    <div class="my-3">
-                        <form>
-                            <div class="d-flex flex-column gap-3">
-                                <div class="d-flex flex-column">
-                                    <div class="mb-3">
-                                        <label for="materi" class="form-label">Materi</label>
-                                        <input type="text" class="form-control" id="materi" name="materi" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="kategori" class="form-label">Kategori</label>
-                                        <select class="form-select" id="kategori" name="kategori" required>
-                                            <option selected disabled>Pilih Kategori</option>
-                                            <option value="materi-pokok-tilawati">Materi Pokok Tilawati</option>
-                                            <option value="materi-penunjang">Materi Penunjang</option>
-                                            <option value="akhlaq-santri">Akhlaq Santri</option>
-                                            <option value="kehadiran">Kehadiran</option>
-                                            <option value="nasihat-nasihat">Nasihat-nasihat</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="kkm" class="form-label">KKM</label>
-                                        <input type="text" class="form-control" id="kkm" name="kkm" required>
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-row gap-3">
-                                    <a href="list.html" class="btn btn-primary btn-sm" onclick="return confirm('Apakah Anda yakin ingin menambah data ini?')">Tambah Data</a>
-                                    <a href="list.html" class="btn btn-secondary btn-sm">Kembali</a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+                    <form>
+                        <div class="d-flex flex-column flex-md-row align-items-md-center my-3 gap-md-0 gap-2">
+                            <label for="materi" class="form-label m-0 p-0 col col-md-2 col-xxl-1 fw-bold">Materi</label>
+                            <p class="m-0 p-0 ms-5 me-2 d-none d-md-block">:</p>
+                            <input type="text" class="form-control" id="materi" name="materi" required>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row align-items-md-center my-3 gap-md-0 gap-2">
+                            <label for="kategori" class="form-label m-0 p-0 col col-md-2 col-xxl-1 fw-bold">Kategori</label>
+                            <p class="m-0 p-0 ms-5 me-2 d-none d-md-block">:</p>
+                            <select class="form-select" id="kategori" name="kategori" required>
+                                <option selected disabled>Pilih Kategori</option>
+                                <option value="materi-pokok-tilawati">Materi Pokok Tilawati</option>
+                                <option value="materi-penunjang">Materi Penunjang</option>
+                                <option value="akhlaq-santri">Akhlaq Santri</option>
+                                <option value="kehadiran">Kehadiran</option>
+                                <option value="nasihat-nasihat">Nasihat-nasihat</option>
+                            </select>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row align-items-md-center my-3 gap-md-0 gap-2">
+                            <label for="kkm" class="form-label m-0 p-0 col col-md-2 col-xxl-1 fw-bold">KKM</label>
+                            <p class="m-0 p-0 ms-5 me-2 d-none d-md-block">:</p>
+                            <input type="text" class="form-control" id="kkm" name="kkm" required>
+                        </div>
+                        <div class="d-flex flex-row gap-3">
+                            <a href="list.html" class="btn btn-primary btn-sm" onclick="return confirm('Apakah Anda yakin ingin menambah data ini?')">Tambah Data</a>
+                            <a href="list.html" class="btn btn-secondary btn-sm">Kembali</a>
+                        </div>
+                    </form>
                     <!-- /Main Content -->
                 </div>
             </div>

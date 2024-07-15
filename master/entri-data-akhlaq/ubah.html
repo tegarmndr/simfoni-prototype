@@ -124,22 +124,17 @@
                     <hr class="my-2">
                     <!-- /Header Content -->
                     <!-- Main Content -->
-                    <div class="my-3">
-                        <form>
-                            <div class="d-flex flex-column gap-3">
-                                <div class="d-flex flex-column">
-                                    <div class="mb-3">
-                                        <label for="akhlaq" class="form-label">Nama Akhlaq</label>
-                                        <input type="text" class="form-control" id="akhlaq" name="akhlaq" required>
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-row gap-3">
-                                    <a href="list.html" class="btn btn-warning btn-sm" onclick="return confirm('Apakah Anda yakin ingin mengubah data ini?')">Ubah Data</a>
-                                    <a href="list.html" class="btn btn-secondary btn-sm">Kembali</a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+                    <form>
+                        <div class="d-flex flex-column flex-md-row align-items-md-center my-3 gap-md-0 gap-2">
+                            <label for="akhlaq" class="form-label m-0 p-0 col col-md-2 col-xxl-1 fw-bold">Nama Akhlaq</label>
+                            <p class="m-0 p-0 ms-5 me-2 d-none d-md-block">:</p>
+                            <input type="text" class="form-control" id="akhlaq" name="akhlaq" required>
+                        </div>
+                        <div class="d-flex flex-row gap-3">
+                            <a href="list.html" class="btn btn-warning btn-sm" onclick="return confirm('Apakah Anda yakin ingin mengubah data ini?')">Ubah Data</a>
+                            <a href="list.html" class="btn btn-secondary btn-sm">Kembali</a>
+                        </div>
+                    </form>
                     <!-- /Main Content -->
                 </div>
             </div>
